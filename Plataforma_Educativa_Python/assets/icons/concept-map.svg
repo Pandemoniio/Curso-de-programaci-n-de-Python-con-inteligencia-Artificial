@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" role="img" aria-labelledby="title desc">
+  <title id="title">Mapa visual de conceptos de la clase</title>
+  <desc id="desc">Diagrama con nodos conectados: datos, decisiones, ciclos, listas y salida.</desc>
+  <rect width="760" height="460" fill="#fbfaf6"/>
+  <rect x="26" y="26" width="708" height="408" rx="18" fill="#ffffff" stroke="#d8ded8" stroke-width="3"/>
+  <path d="M152 156 C246 80, 338 86, 424 154 S576 225, 616 138" fill="none" stroke="#127c72" stroke-width="10" stroke-linecap="round"/>
+  <path d="M146 302 C244 390, 383 373, 458 285 S574 206, 640 298" fill="none" stroke="#c05746" stroke-width="10" stroke-linecap="round"/>
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <g>
+      <rect x="70" y="117" width="150" height="84" rx="12" fill="#e9f4f2" stroke="#127c72" stroke-width="3"/>
+      <text x="145" y="153" fill="#17423d" font-size="20" font-weight="700">Datos</text>
+      <text x="145" y="178" fill="#5b6a65" font-size="15">variables</text>
+    </g>
+    <g>
+      <rect x="306" y="82" width="150" height="84" rx="12" fill="#fff5df" stroke="#b7791f" stroke-width="3"/>
+      <text x="381" y="118" fill="#5f3e12" font-size="20" font-weight="700">Decision</text>
+      <text x="381" y="143" fill="#6f6559" font-size="15">if / elif</text>
+    </g>
+    <g>
+      <rect x="540" y="117" width="150" height="84" rx="12" fill="#f7eae6" stroke="#c05746" stroke-width="3"/>
+      <text x="615" y="153" fill="#642c24" font-size="20" font-weight="700">Ciclos</text>
+      <text x="615" y="178" fill="#6f6559" font-size="15">while / for</text>
+    </g>
+    <g>
+      <rect x="111" y="270" width="150" height="84" rx="12" fill="#f1effb" stroke="#6b5aa6" stroke-width="3"/>
+      <text x="186" y="306" fill="#3c3369" font-size="20" font-weight="700">Listas</text>
+      <text x="186" y="331" fill="#6b667a" font-size="15">indices</text>
+    </g>
+    <g>
+      <rect x="314" y="238" width="150" height="84" rx="12" fill="#eef5e8" stroke="#3f7d45" stroke-width="3"/>
+      <text x="389" y="274" fill="#244a29" font-size="20" font-weight="700">Flujo</text>
+      <text x="389" y="299" fill="#62705e" font-size="15">break / continue</text>
+    </g>
+    <g>
+      <rect x="539" y="280" width="150" height="84" rx="12" fill="#f0f4f1" stroke="#8d9890" stroke-width="3"/>
+      <text x="614" y="316" fill="#303733" font-size="20" font-weight="700">Salida</text>
+      <text x="614" y="341" fill="#66706a" font-size="15">print()</text>
+    </g>
+  </g>
+  <g fill="#222326" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700">
+    <text x="56" y="58">Clase 01</text>
+    <text x="56" y="84" fill="#66706a" font-size="14" font-weight="400">De datos a acciones visibles</text>
+  </g>
+</svg>

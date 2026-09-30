@@ -1,0 +1,75 @@
+{
+  "curso": "Programación, Datos, Visualización e Inteligencia Artificial",
+  "estudiante": "Daniel Pantoja",
+  "docente": "Simena Dinas",
+  "institucion": "Fundación Universitaria de Popayán (FUP)",
+  "clases": [
+    {
+      "numero": 1,
+      "titulo": "Fundamentos de pensamiento computacional y Python",
+      "fecha": "1 de julio de 2026",
+      "modalidad": "Virtual",
+      "descripcion": "La clase inició con la idea de algoritmo como una receta de instrucciones. Variables, datos, decisiones y ciclos.",
+      "temas_principales": [
+        "Algoritmos",
+        "Variables",
+        "Tipos de datos",
+        "Condicionales (if/elif/else)",
+        "Ciclos (while/for)",
+        "Listas y colecciones"
+      ]
+    },
+    {
+      "numero": 2,
+      "titulo": "Funciones: área y perímetro de círculo y óvalo",
+      "fecha": "2 de julio de 2026",
+      "modalidad": "Virtual",
+      "descripcion": "Modularización del código con funciones 'def', parámetros, retorno de resultados y exportación a archivos CSV.",
+      "temas_principales": [
+        "Definición de funciones con def",
+        "Retorno con return",
+        "Cálculo geométrico (círculo y óvalo)",
+        "Lectura y escritura en archivos CSV"
+      ]
+    },
+    {
+      "numero": 3,
+      "titulo": "IMC, NumPy, pandas, DataFrame y bases de datos",
+      "fecha": "3 de julio de 2026",
+      "modalidad": "Virtual",
+      "descripcion": "Cálculo masivo de IMC con aritmética vectorial, arreglos de NumPy, tablas estructuradas con Pandas y SQLite.",
+      "temas_principales": [
+        "Arreglos matriciales con NumPy",
+        "Cálculo de IMC masivo",
+        "DataFrames con Pandas",
+        "Persistencia relacional en SQLite"
+      ]
+    },
+    {
+      "numero": 4,
+      "titulo": "Pandas, gráficos, diccionarios y conjuntos",
+      "fecha": "8 de julio de 2026",
+      "modalidad": "Virtual",
+      "descripcion": "Análisis estadístico y filtrado de medallas olímpicas, estructuras de datos avanzadas (diccionarios dict y conjuntos set).",
+      "temas_principales": [
+        "Análisis de Medallas Olímpicas",
+        "Diccionarios (dict)",
+        "Conjuntos (set)",
+        "Exportación a hojas de cálculo"
+      ]
+    },
+    {
+      "numero": 5,
+      "titulo": "Matplotlib, Ciencia de Datos e introducción a IA",
+      "fecha": "10 de julio de 2026",
+      "modalidad": "Virtual",
+      "descripcion": "Visualización gráfica avanzada con Matplotlib, fundamentos de Data Science, Machine Learning y Visión Artificial.",
+      "temas_principales": [
+        "Gráficos científicos con Matplotlib",
+        "Pipeline de Ciencia de Datos",
+        "Modelos de Machine Learning supervisado",
+        "Procesamiento de Lenguaje Natural (PLN)"
+      ]
+    }
+  ]
+}

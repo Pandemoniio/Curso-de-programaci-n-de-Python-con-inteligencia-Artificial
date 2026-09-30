@@ -1,0 +1,79 @@
+{
+  "tienda": "La Tienda del Caos - Pandemoniio",
+  "autor": "Daniel Pantoja",
+  "iva_porcentaje": 19,
+  "umbral_stock_bajo": 2,
+  "moneda": "COP",
+  "productos": [
+    {
+      "codigo": 1,
+      "nombre": "Sticker individual con diseño aleatorio",
+      "categoria": "Stickers y Papelería",
+      "precio": 3000,
+      "stock": 10
+    },
+    {
+      "codigo": 2,
+      "nombre": "Pack de stickers mini x5",
+      "categoria": "Stickers y Papelería",
+      "precio": 12000,
+      "stock": 8
+    },
+    {
+      "codigo": 3,
+      "nombre": "Libreta de bolsillo para bocetos",
+      "categoria": "Stickers y Papelería",
+      "precio": 18000,
+      "stock": 5
+    },
+    {
+      "codigo": 4,
+      "nombre": "Camiseta con estampado Pandemoniio",
+      "categoria": "Ropa",
+      "precio": 65000,
+      "stock": 4
+    },
+    {
+      "codigo": 5,
+      "nombre": "Hoodie oversize edición limitada",
+      "categoria": "Ropa",
+      "precio": 140000,
+      "stock": 3
+    },
+    {
+      "codigo": 6,
+      "nombre": "Pad mouse con ilustración",
+      "categoria": "Escritorio Creativo",
+      "precio": 32000,
+      "stock": 5
+    },
+    {
+      "codigo": 7,
+      "nombre": "Taza cerámica con ilustración del caos",
+      "categoria": "Escritorio Creativo",
+      "precio": 26000,
+      "stock": 7
+    },
+    {
+      "codigo": 8,
+      "nombre": "Tote bag para llevar ideas y caos",
+      "categoria": "Accesorios y Digitales",
+      "precio": 38000,
+      "stock": 6
+    },
+    {
+      "codigo": 9,
+      "nombre": "Caja Taller del Caos",
+      "categoria": "Accesorios y Digitales",
+      "precio": 120000,
+      "stock": 2
+    },
+    {
+      "codigo": 10,
+      "nombre": "Overlay digital para Twitch modo rojo",
+      "categoria": "Accesorios y Digitales",
+      "precio": 120000,
+      "stock": 6
+    }
+  ]
+}

@@ -1,0 +1,1382 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bitacora Visual 1.2 | Programacion, Datos, Visualizacion e IA</title>
+  <link rel="icon" href="data:," />
+  <script>
+    document.documentElement.classList.add("js");
+  </script>
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+
+<body>
+  <main class="app-shell">
+    <!--
+        PRIMERA PANTALLA / HERO
+        Esta seccion presenta la bitacora. Sus animaciones principales se controlan
+        desde initHeroIntro() en app.js y desde el bloque "Primera pantalla" en styles.css.
+      -->
+    <!-- ========================================================================= -->
+    <!-- [FRAME 01 - PORTADA / HERO PRINCIPAL]                                       -->
+    <!-- Ubicación: Ocupa toda la primera vista (100vh).                            -->
+    <!-- Contiene: Identidad del autor, título animado, selector y tarjeta 3D.     -->
+    <!-- ========================================================================= -->
+    <section class="course-hero is-intro-pending" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="hero-label">Bitácora visual · Curso finalizado</p>
+        <h1 id="page-title">
+          <span>Programacion, Datos,</span>
+          <span>Visualizacion e IA</span>
+        </h1>
+        <div class="hero-title-rule" aria-hidden="true"></div>
+        <p class="subtitle">
+          Registro final de las cinco clases virtuales desarrolladas con la profesora Simena Dinas.
+        </p>
+
+        <a class="identity-card" href="https://www.behance.net/danielpantoja123" target="_blank" rel="noreferrer"
+          aria-label="Abrir portafolio de Behance de Daniel Pantoja">
+          <span class="identity-copy">
+            <span class="identity-label">Bitacora presentada por</span>
+            <strong>Daniel Pantoja</strong>
+            <span>Disenador grafico</span>
+            <span>Universidad del Cauca</span>
+          </span>
+          <span class="identity-mark" aria-hidden="true">
+            <img src="./assets/icons/pandemoniio-logo.svg" alt="" />
+            <span class="identity-portal">
+              <span class="portfolio-action">Clic para ver</span>
+              <span class="portfolio-kicker">PORTAFOLIO</span>
+            </span>
+          </span>
+        </a>
+        <div class="hero-actions" aria-label="Accesos de clase">
+          <details class="classes-dropdown">
+            <summary class="primary-link classes-toggle">
+              <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M10 8.5 16 12l-6 3.5Z"></path>
+              </svg>
+              <span>Iniciar con el curso</span>
+            </summary>
+            <div id="classes-menu" class="classes-menu">
+              <button class="class-option hero-jump" type="button" data-target="clase-1" data-tab="temas">
+                <span>Clase 1</span>
+                <strong>Fundamentos de pensamiento computacional y Python</strong>
+              </button>
+              <button class="class-option hero-jump" type="button" data-target="clase-2">
+                <span>Clase 2</span>
+                <strong>Funciones: area y perimetro de circulo y ovalo</strong>
+              </button>
+              <button class="class-option hero-jump" type="button" data-target="clase-3">
+                <span>Clase 3</span>
+                <strong>IMC, NumPy, pandas, DataFrame y bases de datos</strong>
+              </button>
+              <button class="class-option hero-jump" type="button" data-target="clase-4">
+                <span>Clase 4</span>
+                <strong>Pandas, graficos, diccionarios y conjuntos</strong>
+              </button>
+              <button class="class-option hero-jump" type="button" data-target="clase-5">
+                <span>Clase 5</span>
+                <strong>Matplotlib, Ciencia de Datos e introduccion a IA</strong>
+              </button>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- Imagen interactiva del curso: entra desde la derecha y responde al mouse. -->
+      <div class="course-image" aria-label="Espacio para imagen del curso">
+        <div class="course-card" aria-label="Tarjeta visual del curso">
+          <div class="course-card-inner">
+            <div class="course-card-face course-card-front">
+              <img src="./assets/images/Curso.png" alt="Composicion visual de la Clase 1 de programacion con IA" />
+            </div>
+            <div class="course-card-face course-card-back" aria-hidden="true">
+              <span>Bitacora visual</span>
+              <strong>Programacion, Datos, Visualizacion e IA</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- [FRAME 02 - ENCABEZADO CLASE 1]                                            -->
+    <!-- Ubicación: Segunda pantalla tras hacer scroll.                            -->
+    <!-- Contiene: Título temático, fecha, docente y contador dinámico de temas.   -->
+    <!-- ========================================================================= -->
+    <section id="clase-1" class="class-header" aria-labelledby="class-title">
+      <div>
+        <p class="eyebrow">Clase 1</p>
+        <h2 id="class-title">Fundamentos de pensamiento computacional y Python</h2>
+        <p>
+          La clase inicio con la idea de algoritmo como una receta: una secuencia de pasos claros para resolver un
+          problema.
+          Luego pasamos a variables, datos, decisiones, ciclos, listas y logica anidada.
+        </p>
+      </div>
+
+      <dl class="class-facts">
+        <div>
+          <dt>
+            <svg class="fact-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="16" rx="2"></rect>
+              <path d="M16 3v4"></path>
+              <path d="M8 3v4"></path>
+              <path d="M3 11h18"></path>
+            </svg>
+            Fecha
+          </dt>
+          <dd>1 de julio de 2026</dd>
+        </div>
+        <div>
+          <dt>
+            <svg class="fact-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="8" r="4"></circle>
+              <path d="M4 21c1.8-4 4.6-6 8-6s6.2 2 8 6"></path>
+            </svg>
+            Docente
+          </dt>
+          <dd>Simena Dinas</dd>
+        </div>
+        <div>
+          <dt>
+            <svg class="fact-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="13" rx="2"></rect>
+              <path d="M8 21h8"></path>
+              <path d="M12 17v4"></path>
+            </svg>
+            Modalidad
+          </dt>
+          <dd>Virtual</dd>
+        </div>
+        <div>
+          <dt>
+            <svg class="fact-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8 6h13"></path>
+              <path d="M8 12h13"></path>
+              <path d="M8 18h13"></path>
+              <path d="M3 6h.01"></path>
+              <path d="M3 12h.01"></path>
+              <path d="M3 18h.01"></path>
+            </svg>
+            Temas
+          </dt>
+          <dd><span id="topic-count">0</span> registros</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- [FRAME 03 - CONTEXTO TEÓRICO DE CLASE 1]                                  -->
+    <!-- Ubicación: Grid de 3 columnas debajo de la cabecera.                       -->
+    <!-- Contiene: Idea base (algoritmo), descomposición y línea de tiempo.         -->
+    <!-- ========================================================================= -->
+    <section class="context-grid" aria-label="Contexto de la clase">
+      <article class="context-card">
+        <p class="eyebrow">Idea base</p>
+        <h3>Algoritmo</h3>
+        <p>
+          Un algoritmo es una receta de instrucciones. Primero entendemos el problema, luego lo partimos en pasos,
+          reconocemos patrones y finalmente escribimos reglas que el computador pueda seguir.
+        </p>
+      </article>
+
+      <article class="context-card">
+        <p class="eyebrow">Pensamiento computacional</p>
+        <h3>Descomponer para disenar</h3>
+        <p>
+          Como en un proyecto visual, no se resuelve todo de una vez: se separa el problema en partes, se mira que se
+          repite,
+          se definen variables y se organizan decisiones.
+        </p>
+      </article>
+
+      <article class="context-card timeline-card">
+        <p class="eyebrow">Linea de tiempo</p>
+        <h3>Momentos clave</h3>
+        <ol class="timeline">
+          <li><time>1843</time><span>Ada Lovelace publica el primer algoritmo para una maquina.</span></li>
+          <li><time>1936</time><span>Alan Turing plantea ideas base sobre computacion.</span></li>
+          <li><time>1957</time><span>Fortran impulsa la programacion cientifica.</span></li>
+          <li><time>1991</time><span>Guido van Rossum publica Python.</span></li>
+        </ol>
+      </article>
+    </section>
+
+    <p class="scroll-cue">(Desliza para ver los temas vistos en clase)</p>
+
+    <!-- ========================================================================= -->
+    <!-- [FRAME 04 - BARRA DE NAVEGACIÓN STICKY CLASE 1]                            -->
+    <!-- Ubicación: Barra superior fija (sticky) que se fija al hacer scroll.      -->
+    <!-- Contiene: Indicador de clase y botones de pestañas: Temas, Python, Cierre.-->
+    <!-- ========================================================================= -->
+    <section class="tabs class-one-tabs" aria-label="Secciones de la clase 1">
+      <div class="tabs-context">
+        <span class="class-number-mark" aria-hidden="true">1</span>
+        <div class="tabs-title-block">
+          <p>Clase 1</p>
+          <strong>
+            <span>Fundamentos de pensamiento</span>
+            <span>computacional y Python</span>
+          </strong>
+        </div>
+      </div>
+      <div class="tab-controls">
+        <button class="tab-button is-active" type="button" data-tab="temas" data-step="1">Temas</button>
+        <button class="tab-button" type="button" data-tab="python" data-step="2">Python</button>
+        <button class="tab-button" type="button" data-tab="conclusion" data-step="3">Conclusion</button>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- [FRAME 05 - PANEL DUAL INTERACTIVO DE TEMAS]                              -->
+    <!-- Ubicación: Pestaña activa principal de Clase 1.                           -->
+    <!-- Contiene: Panel izquierdo (lista de 15 temas) y panel derecho (visor de   -->
+    <!-- código interactivo, explicación paso a paso y consola de salida).          -->
+    <!-- ========================================================================= -->
+    <section class="tab-panel is-active" id="tab-temas">
+      <span id="topics-scroll-anchor" class="scroll-anchor" aria-hidden="true"></span>
+      <section class="topic-panel" aria-labelledby="topics-title">
+        <div class="section-heading">
+          <div class="section-title-group">
+            <h2 id="topics-title">Temas vistos en clase</h2>
+            <p class="section-hint">Haz clic en cada etapa para conocer su contenido.</p>
+          </div>
+          <div class="topic-status">
+            <p id="topic-progress-summary" class="progress-summary">Todos - 01 / 15</p>
+            <button id="finish-class" class="finish-class-button" type="button" hidden>Terminar clase</button>
+          </div>
+        </div>
+        <div id="topic-list" class="topic-list"></div>
+      </section>
+
+      <div class="dashboard-grid">
+        <section class="detail-panel" aria-labelledby="detail-title">
+          <div class="detail-topline">
+            <div>
+              <p id="detail-category" class="eyebrow"></p>
+              <h2 id="detail-title"></h2>
+            </div>
+            <span id="detail-level" class="level-pill"></span>
+          </div>
+
+          <p id="detail-summary" class="detail-summary"></p>
+          <div class="concept-strip" id="concept-strip"></div>
+
+          <div class="code-layout">
+            <article class="code-panel">
+              <div class="panel-title-row">
+                <h3>Codigo Python</h3>
+                <button id="copy-code" class="icon-button" type="button" aria-label="Copiar codigo"
+                  title="Copiar codigo">
+                  Copiar
+                </button>
+              </div>
+              <pre><code id="code-block"></code></pre>
+            </article>
+
+            <article class="output-panel">
+              <h3>Salida esperada</h3>
+              <pre><code id="output-block"></code></pre>
+            </article>
+          </div>
+
+          <article class="visual-note">
+            <h3>Lectura visual</h3>
+            <p id="visual-note-text"></p>
+          </article>
+        </section>
+      </div>
+
+      <section class="category-panel" aria-labelledby="category-title">
+        <div>
+          <p class="eyebrow">Categorias vistas en clase</p>
+          <h2 id="category-title">Rutas conceptuales</h2>
+        </div>
+        <div class="filter-group" aria-label="Filtros por tipo de tema">
+          <button class="filter-button is-active" type="button" data-filter="todos">Todos</button>
+          <button class="filter-button" type="button" data-filter="fundamentos">Fundamentos</button>
+          <button class="filter-button" type="button" data-filter="decision">Decision</button>
+          <button class="filter-button" type="button" data-filter="repeticion">Repeticion</button>
+          <button class="filter-button" type="button" data-filter="listas">Listas</button>
+          <button class="filter-button" type="button" data-filter="flujo">Flujo</button>
+        </div>
+      </section>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- [FRAME 06 - REPOSITORIO DE EJEMPLOS EN PYTHON]                             -->
+    <!-- Ubicación: Segunda pestaña de navegación de Clase 1.                       -->
+    <!-- Contiene: Colección de scripts reales explicados con botón para copiar.    -->
+    <!-- ========================================================================= -->
+    <section class="tab-panel" id="tab-python">
+      <section class="python-library" aria-labelledby="python-title">
+        <div>
+          <p class="eyebrow">Repositorio de ejemplos</p>
+          <h2 id="python-title">Muestras Python de la Clase 1</h2>
+          <p>
+            Este espacio reune los fragmentos pequenos de la clase y el archivo completo para entregar o presentar.
+          </p>
+        </div>
+        <div class="code-actions">
+          <button id="copy-full-python" class="file-link" type="button">Copiar codigo completo</button>
+          <a class="secondary-action" href="https://www.programiz.com/python-programming/online-compiler/"
+            target="_blank" rel="noreferrer">
+            Abrir Programiz
+          </a>
+        </div>
+      </section>
+
+      <div id="python-example-list" class="python-example-list"></div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- [FRAME 07 - CIERRE Y CONCLUSIÓN DE CLASE 1]                                -->
+    <!-- Ubicación: Tercera pestaña de navegación de Clase 1.                       -->
+    <!-- Contiene: Reflexión metodológica, aprendizajes y botón para avanzar.       -->
+    <!-- ========================================================================= -->
+    <section class="tab-panel" id="tab-conclusion">
+      <section id="conclusion" class="conclusion-panel" aria-labelledby="conclusion-title">
+        <div class="conclusion-copy">
+          <p class="eyebrow">Cierre de Clase 1</p>
+          <h2 id="conclusion-title">Ejercicio integrador con todo lo aprendido</h2>
+          <p>
+            La conclusion de la clase es una muestra en Python que usa variables, constantes, tipos de datos,
+            decisiones,
+            ciclos, listas, break, continue y logica anidada en un solo recorrido.
+          </p>
+          <p>
+            Para reforzar, el tema que mas conviene repasar es <strong>for</strong>: imaginarlo como caminar por una
+            fila
+            ayuda a entender por que sirve para recorrer listas, nombres, notas o rangos.
+          </p>
+        </div>
+
+        <article class="code-panel final-code">
+          <div class="panel-title-row">
+            <h3>Codigo integrador</h3>
+            <button id="copy-final-code" class="file-link compact" type="button">Copiar</button>
+          </div>
+          <pre><code id="final-code-block"></code></pre>
+        </article>
+      </section>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- [FRAME 08 - CLASE 2: FUNCIONES MODULARES Y FIGURAS GEOMÉTRICAS]            -->
+    <!-- Ubicación: Sección completa de la segunda clase.                          -->
+    <!-- Contiene: Encabezado, barra sticky Clase 2, cálculo de área de círculo    -->
+    <!-- y óvalo, funciones con retorno y manejo de archivos CSV.                   -->
+    <!-- ========================================================================= -->
+    <section id="clase-2" class="class-header class-two-header" aria-labelledby="class-two-title">
+      <div>
+        <p class="eyebrow">Clase 2</p>
+        <h2 id="class-two-title">Funciones: area y perimetro de circulo y ovalo</h2>
+        <p>
+          En esta clase empezamos a organizar el codigo en funciones. El cierre de la sesion quedo en un
+          ejercicio de figuras geometricas: primero se elige entre circulo u ovalo y despues el programa llama
+          las funciones necesarias para calcular area y perimetro.
+        </p>
+      </div>
+
+      <dl class="class-facts">
+        <div>
+          <dt>
+            <svg class="fact-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="16" rx="2"></rect>
+              <path d="M16 3v4"></path>
+              <path d="M8 3v4"></path>
+              <path d="M3 11h18"></path>
+            </svg>
+            Fecha
+          </dt>
+          <dd>2 de julio de 2026</dd>
+        </div>
+        <div>
+          <dt>
+            <svg class="fact-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="8" r="4"></circle>
+              <path d="M4 21c1.8-4 4.6-6 8-6s6.2 2 8 6"></path>
+            </svg>
+            Docente
+          </dt>
+          <dd>Simena Dinas</dd>
+        </div>
+        <div>
+          <dt>
+            <svg class="fact-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 19V5"></path>
+              <path d="M4 19h16"></path>
+              <path d="M8 15c2-7 6-7 8 0"></path>
+            </svg>
+            Enfoque
+          </dt>
+          <dd>Funciones y parametros</dd>
+        </div>
+        <div>
+          <dt>
+            <svg class="fact-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8 6h13"></path>
+              <path d="M8 12h13"></path>
+              <path d="M8 18h13"></path>
+              <path d="M3 6h.01"></path>
+              <path d="M3 12h.01"></path>
+              <path d="M3 18h.01"></path>
+            </svg>
+            Version
+          </dt>
+          <dd>1.2</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="context-grid class-two-context" aria-label="Contexto de la clase 2">
+      <article class="context-card">
+        <p class="eyebrow">Idea general</p>
+        <h3>Funciones para ordenar</h3>
+        <p>
+          Una funcion permite guardar una tarea bajo un nombre. Asi el programa deja de repetir formulas
+          y cada parte queda mas facil de leer, probar y explicar.
+        </p>
+      </article>
+
+      <article class="context-card">
+        <p class="eyebrow">Ejercicio de hoy</p>
+        <h3>Circulo y ovalo</h3>
+        <p>
+          El menu pregunta que figura se desea calcular. Si se elige circulo, usa radio; si se elige ovalo,
+          usa radio 1 y radio 2. Cada opcion llama funciones distintas.
+        </p>
+      </article>
+
+      <article class="context-card timeline-card">
+        <p class="eyebrow">Linea cronologica</p>
+        <h3>Ruta de aprendizaje</h3>
+        <ol class="timeline">
+          <li><time>1</time><span>Entender que una funcion se define con <strong>def</strong>.</span></li>
+          <li><time>2</time><span>Enviar datos a la funcion usando parametros.</span></li>
+          <li><time>3</time><span>Calcular area y perimetro de circulo y ovalo.</span></li>
+          <li><time>4</time><span>El 3 de julio de 2026 continuamos con return y archivos CSV.</span></li>
+        </ol>
+      </article>
+    </section>
+
+    <section class="tabs class-two-tabs" aria-label="Resumen de la clase 2">
+      <div class="tabs-context">
+        <span class="class-number-mark" aria-hidden="true">2</span>
+        <div class="tabs-title-block">
+          <p>Clase 2</p>
+          <strong>
+            <span>Funciones, parametros</span>
+            <span>y calculos geometricos</span>
+          </strong>
+        </div>
+      </div>
+      <div class="class-two-status">
+        <span>Alcance de hoy</span>
+        <strong>Terminado hasta area y perimetro</strong>
+      </div>
+    </section>
+
+    <section class="class-two-board" aria-labelledby="class-two-board-title">
+      <div class="section-heading">
+        <div class="section-title-group">
+          <p class="eyebrow">Contenido de la Clase 2</p>
+          <h2 id="class-two-board-title">Temas vistos en la Clase 2</h2>
+          <p class="section-hint">
+            Haz clic en cada etapa para revisar el concepto, el codigo y la salida esperada.
+          </p>
+        </div>
+        <div class="topic-status">
+          <p id="class-two-progress-summary" class="progress-summary">Clase 2 - 01 / 08</p>
+        </div>
+      </div>
+
+      <div id="class-two-topic-list" class="topic-list class-two-topic-list"></div>
+
+      <div class="dashboard-grid class-two-dashboard">
+        <article class="detail-panel class-two-detail-panel">
+          <div class="detail-topline">
+            <div>
+              <p id="class-two-detail-category" class="eyebrow"></p>
+              <h2 id="class-two-detail-title"></h2>
+            </div>
+            <span id="class-two-detail-level" class="level-pill"></span>
+          </div>
+
+          <p id="class-two-detail-summary" class="detail-summary"></p>
+          <div class="concept-strip" id="class-two-concept-strip"></div>
+
+          <div class="code-layout class-two-code-layout">
+            <article class="code-panel">
+              <div class="panel-title-row">
+                <h3>Codigo Python</h3>
+                <button id="copy-class-two-code" class="icon-button" type="button"
+                  aria-label="Copiar codigo de clase 2">
+                  Copiar
+                </button>
+              </div>
+              <pre><code id="class-two-code-block"></code></pre>
+            </article>
+
+            <article class="output-panel">
+              <h3>Salida esperada</h3>
+              <pre><code id="class-two-output-block"></code></pre>
+            </article>
+          </div>
+
+          <article class="visual-note">
+            <h3>Lectura visual</h3>
+            <p id="class-two-visual-note-text"></p>
+          </article>
+        </article>
+      </div>
+
+      <section class="class-two-next" aria-labelledby="class-two-next-title">
+        <div>
+          <p class="eyebrow">Pendiente para la proxima clase</p>
+          <h2 id="class-two-next-title">3 de julio de 2026</h2>
+          <p>
+            La siguiente sesion continuara con funcion retorno, escritura CSV, lectura CSV y procesamiento CSV.
+            Esta version 1.2 deja marcado el punto exacto donde cerro la clase de hoy.
+          </p>
+        </div>
+        <ol class="timeline class-two-mini-timeline">
+          <li><time>01</time><span>Funcion con <strong>return</strong> para guardar resultados.</span></li>
+          <li><time>02</time><span>Escribir datos en archivos CSV.</span></li>
+          <li><time>03</time><span>Leer datos desde archivos CSV.</span></li>
+          <li><time>04</time><span>Procesar datos CSV con funciones.</span></li>
+        </ol>
+      </section>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- [FRAME 09 - CLASE 3: NUMPY, DATAFRAMES Y BASES DE DATOS]                   -->
+    <!-- Ubicación: Sección completa de la tercera clase.                          -->
+    <!-- Contiene: Encabezado, barra sticky Clase 3, cálculo masivo de IMC,         -->
+    <!-- matrices NumPy, tablas con Pandas y consultas relacionales en SQLite.     -->
+    <!-- ========================================================================= -->
+    <section id="clase-3" class="class-header class-three-header" aria-labelledby="class-three-title">
+      <div>
+        <p class="eyebrow">Clase 3</p>
+        <h2 id="class-three-title">IMC, NumPy, pandas, DataFrame y bases de datos</h2>
+        <p>
+          La Clase 3 retoma conceptos conocidos con un ejemplo de IMC y luego avanza hacia trabajo con datos:
+          listas, arreglos de NumPy, matrices, pandas, DataFrame, nomina de empleados, bases de datos y
+          practica integradora con archivos CSV.
+        </p>
+      </div>
+
+      <dl class="class-facts">
+        <div>
+          <dt>
+            <svg class="fact-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="16" rx="2"></rect>
+              <path d="M16 3v4"></path>
+              <path d="M8 3v4"></path>
+              <path d="M3 11h18"></path>
+            </svg>
+            Fecha
+          </dt>
+          <dd>3 de julio de 2026</dd>
+        </div>
+        <div>
+          <dt>
+            <svg class="fact-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="8" r="4"></circle>
+              <path d="M4 21c1.8-4 4.6-6 8-6s6.2 2 8 6"></path>
+            </svg>
+            Docente
+          </dt>
+          <dd>Simena Dinas</dd>
+        </div>
+        <div>
+          <dt>
+            <svg class="fact-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 19V5"></path>
+              <path d="M4 19h16"></path>
+              <path d="M8 15h2"></path>
+              <path d="M12 11h2"></path>
+              <path d="M16 7h2"></path>
+            </svg>
+            Enfoque
+          </dt>
+          <dd>Datos con Python</dd>
+        </div>
+        <div>
+          <dt>
+            <svg class="fact-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8 6h13"></path>
+              <path d="M8 12h13"></path>
+              <path d="M8 18h13"></path>
+              <path d="M3 6h.01"></path>
+              <path d="M3 12h.01"></path>
+              <path d="M3 18h.01"></path>
+            </svg>
+            Estado
+          </dt>
+          <dd>Integrada</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="context-grid class-three-context" aria-label="Contexto de la clase 3">
+      <article class="context-card">
+        <p class="eyebrow">Puente de repaso</p>
+        <h3>IMC y decisiones</h3>
+        <p>
+          El ejemplo de peso permitio recordar funciones, parametros, operaciones, return y condicionales
+          para clasificar el resultado del IMC.
+        </p>
+      </article>
+
+      <article class="context-card">
+        <p class="eyebrow">Datos en memoria</p>
+        <h3>NumPy y pandas</h3>
+        <p>
+          NumPy ayuda a trabajar con arreglos y matrices. Pandas permite organizar datos como tablas,
+          revisar columnas, calcular totales y analizar informacion real.
+        </p>
+      </article>
+
+      <article class="context-card timeline-card">
+        <p class="eyebrow">Linea cronologica</p>
+        <h3>Ruta de la sesion</h3>
+        <ol class="timeline">
+          <li><time>1</time><span>Repaso de funciones y condicionales con el IMC.</span></li>
+          <li><time>2</time><span>Listas, slicing, append e insert.</span></li>
+          <li><time>3</time><span>NumPy: ndarray, matrices, shape, size, ndim y dtype.</span></li>
+          <li><time>4</time><span>Pandas, DataFrame, nomina, memoria, CSV y bases de datos.</span></li>
+        </ol>
+      </article>
+    </section>
+
+    <section class="tabs class-three-tabs" aria-label="Resumen de la clase 3">
+      <div class="tabs-context">
+        <span class="class-number-mark" aria-hidden="true">3</span>
+        <div class="tabs-title-block">
+          <p>Clase 3</p>
+          <strong>
+            <span>Python aplicado</span>
+            <span>a datos reales</span>
+          </strong>
+        </div>
+      </div>
+      <div class="class-three-status">
+        <span>Alcance integrado</span>
+        <strong>IMC, NumPy, pandas, SQL y CSV</strong>
+      </div>
+    </section>
+
+    <section class="class-three-board" aria-labelledby="class-three-board-title">
+      <div class="section-heading">
+        <div class="section-title-group">
+          <p class="eyebrow">Contenido de la Clase 3</p>
+          <h2 id="class-three-board-title">Temas vistos en la Clase 3</h2>
+          <p class="section-hint">
+            Selecciona cada etapa para revisar el concepto, el ejemplo de codigo y la lectura clave.
+          </p>
+        </div>
+        <div class="topic-status">
+          <p id="class-three-progress-summary" class="progress-summary">Clase 3 - 01 / 10</p>
+        </div>
+      </div>
+
+      <div id="class-three-topic-list" class="topic-list class-three-topic-list"></div>
+
+      <div class="dashboard-grid class-three-dashboard">
+        <article class="detail-panel class-three-detail-panel">
+          <div class="detail-topline">
+            <div>
+              <p id="class-three-detail-category" class="eyebrow"></p>
+              <h2 id="class-three-detail-title"></h2>
+            </div>
+            <span id="class-three-detail-level" class="level-pill"></span>
+          </div>
+
+          <p id="class-three-detail-summary" class="detail-summary"></p>
+          <div class="concept-strip" id="class-three-concept-strip"></div>
+
+          <div class="code-layout class-three-code-layout">
+            <article class="code-panel">
+              <div class="panel-title-row">
+                <h3>Codigo Python</h3>
+                <button id="copy-class-three-code" class="icon-button" type="button"
+                  aria-label="Copiar codigo de clase 3">
+                  Copiar
+                </button>
+              </div>
+              <pre><code id="class-three-code-block"></code></pre>
+            </article>
+
+            <article class="output-panel">
+              <h3>Salida esperada</h3>
+              <pre><code id="class-three-output-block"></code></pre>
+            </article>
+          </div>
+
+          <article class="visual-note">
+            <h3>Lectura visual</h3>
+            <p id="class-three-visual-note-text"></p>
+          </article>
+        </article>
+      </div>
+
+      <section class="class-three-next" aria-labelledby="class-three-next-title">
+        <div>
+          <p class="eyebrow">Cierre de semana</p>
+          <h2 id="class-three-next-title">Practica integradora</h2>
+          <p>
+            El cierre propone buscar un dataset en formato CSV, cargarlo con pandas, revisar su estructura,
+            hacer operaciones y dejar preparado el camino para graficos con Matplotlib.
+          </p>
+        </div>
+        <ol class="timeline class-three-mini-timeline">
+          <li><time>01</time><span>Escoger un dataset que nos guste y descargarlo como CSV.</span></li>
+          <li><time>02</time><span>Cargarlo con pandas y convertirlo en DataFrame.</span></li>
+          <li><time>03</time><span>Revisar memoria, tipos, size, shape, ndim y valores faltantes.</span></li>
+          <li><time>04</time><span>Crear ejercicios con funciones, NumPy, pandas y apoyo de IA.</span></li>
+        </ol>
+      </section>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- [FRAME 10 - CLASE 4: ANÁLISIS DE MEDALLAS, DICCIONARIOS Y SETS]            -->
+    <!-- Ubicación: Sección completa de la cuarta clase.                           -->
+    <!-- Contiene: Tablero de Pandas con medallas olímpicas, análisis estadístico,  -->
+    <!-- estructuras de datos avanzadas (diccionarios y conjuntos) y ejercicios.   -->
+    <!-- ========================================================================= -->
+    <section id="clase-4" class="class-header class-four-header" aria-labelledby="class-four-title">
+      <div>
+        <p class="eyebrow">Clase 4</p>
+        <h2 id="class-four-title">Pandas, graficos, diccionarios y conjuntos</h2>
+        <p>
+          La sesion conecto el analisis tabular con la visualizacion: cargar y ordenar datos con pandas,
+          crear graficos con Matplotlib y organizar informacion mediante diccionarios y conjuntos.
+        </p>
+      </div>
+
+      <dl class="class-facts">
+        <div>
+          <dt>
+            <svg class="fact-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="16" rx="2"></rect>
+              <path d="M16 3v4"></path>
+              <path d="M8 3v4"></path>
+              <path d="M3 11h18"></path>
+            </svg>
+            Fecha
+          </dt>
+          <dd>8 de julio de 2026</dd>
+        </div>
+        <div>
+          <dt>
+            <svg class="fact-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="8" r="4"></circle>
+              <path d="M4 21c1.8-4 4.6-6 8-6s6.2 2 8 6"></path>
+            </svg>
+            Docente
+          </dt>
+          <dd>Simena Dinas</dd>
+        </div>
+        <div>
+          <dt>
+            <svg class="fact-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 5v14"></path>
+              <path d="M5 12h14"></path>
+            </svg>
+            Estado
+          </dt>
+          <dd>Realizada</dd>
+        </div>
+        <div>
+          <dt>
+            <svg class="fact-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8 6h13"></path>
+              <path d="M8 12h13"></path>
+              <path d="M8 18h13"></path>
+              <path d="M3 6h.01"></path>
+              <path d="M3 12h.01"></path>
+              <path d="M3 18h.01"></path>
+            </svg>
+            Registro
+          </dt>
+          <dd>Apuntes y ejercicios disponibles</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="context-grid class-four-context" aria-label="Contexto de la clase 4">
+      <article class="context-card">
+        <p class="eyebrow">Datos</p>
+        <h3>Pandas y DataFrames</h3>
+        <p>
+          Lectura de Excel, seleccion de columnas, ordenamiento, filtros y preparacion de tablas para
+          responder preguntas.
+        </p>
+      </article>
+
+      <article class="context-card">
+        <p class="eyebrow">Visualizacion</p>
+        <h3>Matplotlib aplicado</h3>
+        <p>
+          Graficos de barras y dispersion para comparar categorias, observar relaciones y comunicar
+          resultados.
+        </p>
+      </article>
+
+      <article class="context-card timeline-card">
+        <p class="eyebrow">Estructuras</p>
+        <h3>Diccionarios y conjuntos</h3>
+        <ol class="timeline">
+          <li><time>1</time><span>Guardar informacion con parejas clave y valor.</span></li>
+          <li><time>2</time><span>Evitar datos repetidos mediante conjuntos.</span></li>
+          <li><time>3</time><span>Conectar estructuras de Python con sistemas reales.</span></li>
+        </ol>
+      </article>
+    </section>
+
+    <section class="tabs class-four-tabs lesson-tabs" aria-label="Resumen de la clase 4">
+      <div class="tabs-context">
+        <span class="class-number-mark" aria-hidden="true">4</span>
+        <div class="tabs-title-block">
+          <p>Clase 4</p>
+          <strong>
+            <span>Pandas, gráficos,</span>
+            <span>diccionarios y conjuntos</span>
+          </strong>
+        </div>
+      </div>
+      <div class="lesson-status lesson-status-four">
+        <span>Recorrido</span>
+        <strong>6 temas · 3 ejercicios</strong>
+      </div>
+    </section>
+
+    <section class="lesson-board class-four-board" aria-labelledby="class-four-board-title">
+      <div class="lesson-board-heading">
+        <div>
+          <p class="eyebrow">Contenido organizado</p>
+          <h2 id="class-four-board-title">Secuencia de la Clase 4</h2>
+        </div>
+        <p>La clase avanza desde la lectura de una tabla hasta su visualización y almacenamiento.</p>
+      </div>
+
+      <div class="lesson-sequence-grid">
+        <article class="lesson-step-card">
+          <span class="lesson-step-number">01</span>
+          <p class="lesson-step-kicker">Preparar</p>
+          <h3>Cargar datos con Pandas</h3>
+          <p><code>read_excel()</code> convierte un archivo de Excel en un <code>DataFrame</code>. Antes de analizar, se revisan columnas, tipos y primeras filas con <code>head()</code> e <code>info()</code>.</p>
+        </article>
+        <article class="lesson-step-card">
+          <span class="lesson-step-number">02</span>
+          <p class="lesson-step-kicker">Ordenar</p>
+          <h3>Seleccionar y transformar</h3>
+          <p>Con <code>rename()</code>, filtros y <code>sort_values()</code> se prepara solamente la información que responde a la pregunta. Así evitamos graficar datos sin contexto.</p>
+        </article>
+        <article class="lesson-step-card">
+          <span class="lesson-step-number">03</span>
+          <p class="lesson-step-kicker">Representar</p>
+          <h3>Gráficos con Matplotlib</h3>
+          <p>El gráfico de barras compara categorías; el de dispersión estudia relaciones entre variables. Títulos, ejes, leyenda y etiquetas convierten el dibujo en información comprensible.</p>
+        </article>
+        <article class="lesson-step-card">
+          <span class="lesson-step-number">04</span>
+          <p class="lesson-step-kicker">Guardar</p>
+          <h3>Figura, Axes y exportación</h3>
+          <p><code>fig</code> es el lienzo completo y <code>ax</code> el área donde se dibuja. Con <code>fig.savefig()</code> el resultado puede conservarse como imagen para informes o presentaciones.</p>
+        </article>
+        <article class="lesson-step-card">
+          <span class="lesson-step-number">05</span>
+          <p class="lesson-step-kicker">Estructurar</p>
+          <h3>Diccionarios y conjuntos</h3>
+          <p>Un diccionario relaciona claves con valores; un conjunto evita duplicados. Juntos permiten representar catálogos, categorías y estados antes de usar una base de datos.</p>
+        </article>
+        <article class="lesson-step-card">
+          <span class="lesson-step-number">06</span>
+          <p class="lesson-step-kicker">Conectar</p>
+          <h3>Del formulario al dashboard</h3>
+          <p>El flujo completo es: capturar, validar, guardar, consultar, organizar con Pandas y visualizar. SQLite permite practicar este proceso sin instalar un servidor externo.</p>
+        </article>
+      </div>
+
+      <section class="lesson-results" aria-labelledby="class-four-results-title">
+        <div>
+          <p class="eyebrow">Práctica realizada</p>
+          <h2 id="class-four-results-title">Tres resultados concretos</h2>
+          <p>Los ejercicios convierten los conceptos en pequeñas soluciones que pueden explicarse durante la presentación.</p>
+        </div>
+        <div class="lesson-result-list">
+          <article>
+            <span>01</span>
+            <div><strong>Medallas olímpicas</strong><p>Lectura de Excel y gráfico de barras agrupadas con oro, plata y bronce.</p></div>
+          </article>
+          <article>
+            <span>02</span>
+            <div><strong>Datos y gráficos con SQLite</strong><p>Guardar registros, consultarlos con Pandas y decidir qué variables comparar.</p></div>
+          </article>
+          <article>
+            <span>03</span>
+            <div><strong>Biblioteca en Python</strong><p>Catálogo con diccionarios y conjuntos para libros, categorías y préstamos.</p></div>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- [FRAME 11 - CLASE 5: VISUALIZACIÓN CIENTÍFICA E INTELIGENCIA ARTIFICIAL]   -->
+    <!-- Ubicación: Sección completa de la quinta clase.                           -->
+    <!-- Contiene: Gráficos avanzados con Matplotlib, fundamentos de Data Science,  -->
+    <!-- Machine Learning, procesamiento de lenguaje natural y visión artificial.   -->
+    <!-- ========================================================================= -->
+    <section id="clase-5" class="class-header class-five-header" aria-labelledby="class-five-title">
+      <div>
+        <p class="eyebrow">Clase 5</p>
+        <h2 id="class-five-title">Matplotlib, Ciencia de Datos e introduccion a IA</h2>
+        <p>
+          Una sesion panoramica y ampliada sobre visualizacion, el ecosistema cientifico de Python,
+          Machine Learning, lenguaje natural y procesamiento de imagenes.
+        </p>
+      </div>
+
+      <dl class="class-facts">
+        <div>
+          <dt>Fecha</dt>
+          <dd>9 de julio de 2026</dd>
+        </div>
+        <div>
+          <dt>Docente</dt>
+          <dd>Simena Dinas</dd>
+        </div>
+        <div>
+          <dt>Estado</dt>
+          <dd>Clase finalizada · cierre del curso</dd>
+        </div>
+        <div>
+          <dt>Enfoque</dt>
+          <dd>Conceptos, codigo y ampliaciones</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="tabs class-five-tabs lesson-tabs" aria-label="Resumen de la clase 5">
+      <div class="tabs-context">
+        <span class="class-number-mark" aria-hidden="true">5</span>
+        <div class="tabs-title-block">
+          <p>Clase 5</p>
+          <strong>
+            <span>Visualización, datos</span>
+            <span>e introducción a IA</span>
+          </strong>
+        </div>
+      </div>
+      <div class="lesson-status lesson-status-five">
+        <span>Cierre del curso</span>
+        <strong>Clase 5 de 5 · Finalizada</strong>
+      </div>
+    </section>
+
+    <section class="lesson-board class-five-board" aria-labelledby="class-five-board-title">
+      <div class="lesson-board-heading">
+        <div>
+          <p class="eyebrow">Mapa de contenidos</p>
+          <h2 id="class-five-board-title">Ocho temas en una secuencia clara</h2>
+        </div>
+        <p>Fue una clase panorámica: cada bloque presenta qué es la herramienta, para qué sirve y cómo se conecta con las demás.</p>
+      </div>
+
+      <div class="lesson-sequence-grid class-five-sequence">
+        <article class="lesson-step-card">
+          <span class="lesson-step-number">01</span>
+          <p class="lesson-step-kicker">Visualización base</p>
+          <h3>Matplotlib y pyplot</h3>
+          <p>Matplotlib es el lienzo científico de Python. <code>pyplot</code> ofrece comandos directos, mientras que el enfoque con objetos da mayor control para proyectos complejos.</p>
+        </article>
+        <article class="lesson-step-card">
+          <span class="lesson-step-number">02</span>
+          <p class="lesson-step-kicker">Anatomía</p>
+          <h3>Figure, Axes y personalización</h3>
+          <p><code>Figure</code> contiene todo; cada <code>Axes</code> representa un gráfico. Títulos, ejes, leyenda y cuadrícula orientan la lectura y deben responder a una intención comunicativa.</p>
+        </article>
+        <article class="lesson-step-card">
+          <span class="lesson-step-number">03</span>
+          <p class="lesson-step-kicker">Pila científica</p>
+          <h3>NumPy, Pandas y Seaborn</h3>
+          <p>NumPy aporta arreglos y cálculo rápido; Pandas organiza tablas; Seaborn facilita gráficos estadísticos. Las bibliotecas forman una pila y se apoyan unas en otras.</p>
+        </article>
+        <article class="lesson-step-card">
+          <span class="lesson-step-number">04</span>
+          <p class="lesson-step-kicker">Proceso</p>
+          <h3>Ciencia de Datos</h3>
+          <p>Consiste en transformar datos en conocimiento útil. El flujo incluye obtención, limpieza, exploración, visualización, modelado, evaluación y comunicación responsable.</p>
+        </article>
+        <article class="lesson-step-card">
+          <span class="lesson-step-number">05</span>
+          <p class="lesson-step-kicker">Aprendizaje</p>
+          <h3>Machine Learning y Deep Learning</h3>
+          <p>Scikit-learn cubre modelos clásicos supervisados y no supervisados. PyTorch y TensorFlow permiten construir redes neuronales profundas cuando los datos y el problema lo justifican.</p>
+        </article>
+        <article class="lesson-step-card">
+          <span class="lesson-step-number">06</span>
+          <p class="lesson-step-kicker">Lenguaje</p>
+          <h3>PLN: del texto al número</h3>
+          <p>NLTK y spaCy ayudan a limpiar y analizar texto. TF-IDF, Word2Vec y los embeddings convierten palabras u oraciones en vectores que un algoritmo puede procesar.</p>
+        </article>
+        <article class="lesson-step-card">
+          <span class="lesson-step-number">07</span>
+          <p class="lesson-step-kicker">Exploración</p>
+          <h3>Visualización interactiva</h3>
+          <p>Plotly, Altair y Bokeh permiten filtros, zoom y datos emergentes. Son útiles en dashboards, pero la interactividad no reemplaza una pregunta ni una narrativa clara.</p>
+        </article>
+        <article class="lesson-step-card">
+          <span class="lesson-step-number">08</span>
+          <p class="lesson-step-kicker">Imágenes</p>
+          <h3>OpenCV y scikit-image</h3>
+          <p>Una imagen digital es una matriz de píxeles. OpenCV se orienta al rendimiento y tiempo real; scikit-image favorece análisis científico, filtros, segmentación y morfología.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="class-five-document" aria-labelledby="class-five-document-title">
+      <div>
+        <p class="eyebrow">Documento vivo</p>
+        <h2 id="class-five-document-title">Apuntes completos y ampliados</h2>
+        <p>
+          El documento de la clase conserva las diapositivas como punto de partida y amplia los temas
+          importantes con funcionamiento, ejemplos, aplicaciones, diferencias y precauciones.
+        </p>
+      </div>
+      <a class="file-link" href="./docs/Clase_5_Matplotlib_Simena_Dias.docx">
+        Abrir apuntes de la Clase 5
+      </a>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- [FRAME 12 - PROYECTO FINAL INTEGRADOR: SISTEMA DE INVENTARIO]              -->
+    <!-- Ubicación: Sección de cierre de la bitácora.                              -->
+    <!-- Contiene: Demostración del programa real en Python para la Tienda del Caos-->
+    <!-- (variables, listas, ciclo while, carrito de compras, cálculo de IVA).      -->
+    <!-- ========================================================================= -->
+    <section id="proyecto-final" class="final-project-showcase" aria-labelledby="final-project-title">
+      <div class="final-project-heading">
+        <div>
+          <p class="eyebrow">Proyecto final del curso</p>
+          <h2 id="final-project-title">Inventario básico de Pandemoniio</h2>
+          <p>
+            La Tienda del Caos es el ejercicio final creado durante el curso. Presenta diez productos de
+            Pandemoniio, permite comprar varias unidades, actualiza el stock y calcula el total con IVA.
+          </p>
+        </div>
+        <div class="course-completion-badge" aria-label="Curso completado: cinco de cinco clases">
+          <strong>5/5</strong>
+          <span>clases realizadas</span>
+        </div>
+      </div>
+
+      <div class="final-project-grid">
+        <article class="project-explanation">
+          <p class="project-label">Cómo funciona</p>
+          <ol class="project-flow">
+            <li><span>01</span><div><strong>Catálogo</strong><p>Muestra diez productos de Pandemoniio organizados en papelería, ropa, escritorio, accesorios y digitales.</p></div></li>
+            <li><span>02</span><div><strong>Selección</strong><p>El cliente escribe un código; una secuencia de <code>if</code> y <code>elif</code> encuentra el nombre, precio y stock.</p></div></li>
+            <li><span>03</span><div><strong>Carrito y stock</strong><p>Comprueba la cantidad, acumula la compra, descuenta unidades y genera una alerta cuando queda poco inventario.</p></div></li>
+            <li><span>04</span><div><strong>Pago</strong><p>Calcula el IVA del 19 %, presenta el total y permite escoger entre tarjeta de crédito o efectivo.</p></div></li>
+          </ol>
+
+          <div class="project-concepts" aria-label="Conceptos de Python utilizados">
+            <span>Variables</span><span>Constantes</span><span>input</span><span>print</span>
+            <span>while</span><span>if / elif / else</span><span>Cálculos</span><span>Stock</span>
+          </div>
+
+          <div class="project-actions">
+            <a class="file-link" href="./proyectos_python/proyecto_final_inventario.py" download>Descargar programa .py</a>
+            <button id="copy-store-code" class="secondary-action" type="button">Copiar código</button>
+          </div>
+        </article>
+
+        <article class="project-terminal" aria-labelledby="project-terminal-title">
+          <div class="terminal-toolbar">
+            <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+            <strong id="project-terminal-title">inventario_pandemoniio.py</strong>
+          </div>
+          <pre><code>BIENVENIDO A LA TIENDA DEL CAOS
+
+Código del producto: 4
+Seleccionaste: Camiseta Modo Demonio Corazón Azul
+Precio unitario: $ 70000
+Unidades disponibles: 3
+¿Cuántas unidades quieres comprar?: 1
+
+Producto agregado al carrito.
+Subtotal de este producto: $ 70000
+ALERTA INTERNA: stock bajo. Quedan 2 unidades.
+
+¿Quieres agregar otro producto?: no
+
+RESUMEN DE COMPRA
+Cantidad total de productos: 1
+Subtotal antes de IVA: $ 70000
+IVA aplicado: 19 %
+Total a pagar: $ 83300
+Método seleccionado: Tarjeta de crédito</code></pre>
+        </article>
+      </div>
+
+      <details class="project-code-disclosure">
+        <summary>Ver el código presentado</summary>
+        <pre><code id="store-code-block"># Inventario basico de Pandemoniio
+# Version sencilla usando solo temas iniciales del curso:
+# variables, constantes, input, print, while, if, elif, else y calculos.
+
+IVA = 19
+STOCK_BAJO = 5
+
+producto_1 = "Sticker sheet Taller del Caos"
+precio_1 = 12000
+stock_1 = 8
+
+producto_2 = "Postal Demonio Amigo"
+precio_2 = 8000
+stock_2 = 12
+
+producto_3 = "Libreta de proyectos caoticos"
+precio_3 = 28000
+stock_3 = 6
+
+producto_4 = "Camiseta Modo Demonio Corazon Azul"
+precio_4 = 70000
+stock_4 = 3
+
+producto_5 = "Hoodie Taller del Caos"
+precio_5 = 150000
+stock_5 = 2
+
+producto_6 = "Mug En el Taller del Caos"
+precio_6 = 32000
+stock_6 = 9
+
+producto_7 = "Mousepad Rojo para Actuar"
+precio_7 = 45000
+stock_7 = 7
+
+producto_8 = "Tote bag para llevar ideas y caos"
+precio_8 = 38000
+stock_8 = 6
+
+producto_9 = "Caja Taller del Caos"
+precio_9 = 120000
+stock_9 = 2
+
+producto_10 = "Overlay digital para Twitch modo rojo"
+precio_10 = 120000
+stock_10 = 6
+
+subtotal_compra = 0
+cantidad_total = 0
+seguir_comprando = "si"
+
+print("==============================================")
+print("BIENVENIDO A LA TIENDA DEL CAOS")
+print("==============================================")
+print("Productos hechos con esfuerzo, carino y caos creativo.")
+print()
+
+while seguir_comprando == "si":
+    print("CATALOGO DE PRODUCTOS")
+    print()
+    print("STICKERS Y PAPELERIA")
+    print("1.", producto_1, "- Precio: $", precio_1)
+    print("2.", producto_2, "- Precio: $", precio_2)
+    print("3.", producto_3, "- Precio: $", precio_3)
+    print()
+
+    print("ROPA")
+    print("4.", producto_4, "- Precio: $", precio_4)
+    print("5.", producto_5, "- Precio: $", precio_5)
+    print()
+
+    print("ESCRITORIO CREATIVO")
+    print("6.", producto_6, "- Precio: $", precio_6)
+    print("7.", producto_7, "- Precio: $", precio_7)
+    print()
+
+    print("ACCESORIOS Y DIGITALES")
+    print("8.", producto_8, "- Precio: $", precio_8)
+    print("9.", producto_9, "- Precio: $", precio_9)
+    print("10.", producto_10, "- Precio: $", precio_10)
+    print()
+
+    codigo = int(input("Escribe el codigo del producto que quieres comprar: "))
+
+    producto_elegido = ""
+    precio_elegido = 0
+    stock_elegido = 0
+    producto_existe = "si"
+
+    if codigo == 1:
+        producto_elegido = producto_1
+        precio_elegido = precio_1
+        stock_elegido = stock_1
+    elif codigo == 2:
+        producto_elegido = producto_2
+        precio_elegido = precio_2
+        stock_elegido = stock_2
+    elif codigo == 3:
+        producto_elegido = producto_3
+        precio_elegido = precio_3
+        stock_elegido = stock_3
+    elif codigo == 4:
+        producto_elegido = producto_4
+        precio_elegido = precio_4
+        stock_elegido = stock_4
+    elif codigo == 5:
+        producto_elegido = producto_5
+        precio_elegido = precio_5
+        stock_elegido = stock_5
+    elif codigo == 6:
+        producto_elegido = producto_6
+        precio_elegido = precio_6
+        stock_elegido = stock_6
+    elif codigo == 7:
+        producto_elegido = producto_7
+        precio_elegido = precio_7
+        stock_elegido = stock_7
+    elif codigo == 8:
+        producto_elegido = producto_8
+        precio_elegido = precio_8
+        stock_elegido = stock_8
+    elif codigo == 9:
+        producto_elegido = producto_9
+        precio_elegido = precio_9
+        stock_elegido = stock_9
+    elif codigo == 10:
+        producto_elegido = producto_10
+        precio_elegido = precio_10
+        stock_elegido = stock_10
+    else:
+        print("Ese codigo no existe.")
+        producto_existe = "no"
+
+    if producto_existe == "si":
+        print()
+        print("Seleccionaste:", producto_elegido)
+        print("Precio unitario: $", precio_elegido)
+        print("Unidades disponibles:", stock_elegido)
+        print()
+
+        cantidad = int(input("Cuantas unidades quieres comprar?: "))
+
+        if cantidad &lt;= 0:
+            print("La cantidad debe ser mayor que cero.")
+        elif cantidad &gt; stock_elegido:
+            print("No hay suficiente stock para esa cantidad.")
+        else:
+            subtotal_producto = precio_elegido * cantidad
+            subtotal_compra = subtotal_compra + subtotal_producto
+            cantidad_total = cantidad_total + cantidad
+            stock_restante = stock_elegido - cantidad
+
+            if codigo == 1:
+                stock_1 = stock_restante
+            elif codigo == 2:
+                stock_2 = stock_restante
+            elif codigo == 3:
+                stock_3 = stock_restante
+            elif codigo == 4:
+                stock_4 = stock_restante
+            elif codigo == 5:
+                stock_5 = stock_restante
+            elif codigo == 6:
+                stock_6 = stock_restante
+            elif codigo == 7:
+                stock_7 = stock_restante
+            elif codigo == 8:
+                stock_8 = stock_restante
+            elif codigo == 9:
+                stock_9 = stock_restante
+            elif codigo == 10:
+                stock_10 = stock_restante
+
+            print()
+            print("Producto agregado al carrito.")
+            print("Subtotal de este producto: $", subtotal_producto)
+            print("Productos totales en el carrito:", cantidad_total)
+
+            if stock_restante &lt;= STOCK_BAJO:
+                print("ALERTA INTERNA: stock bajo. Quedan", stock_restante, "unidades.")
+
+    print()
+    seguir_comprando = input("Quieres agregar otro producto? Escribe si o no: ")
+    print()
+
+print("==============================================")
+print("RESUMEN DE COMPRA")
+print("==============================================")
+
+if cantidad_total &gt; 0:
+    valor_iva = subtotal_compra * IVA / 100
+    total_pagar = subtotal_compra + valor_iva
+
+    print("Cantidad total de productos:", cantidad_total)
+    print("Subtotal antes de IVA: $", subtotal_compra)
+    print("IVA aplicado:", IVA, "%")
+    print("Valor del IVA: $", int(valor_iva))
+    print("Total a pagar: $", int(total_pagar))
+    print()
+
+    print("Metodo de pago")
+    print("1. Tarjeta de credito")
+    print("2. Efectivo")
+    opcion_pago = int(input("Elige una opcion de pago: "))
+
+    if opcion_pago == 1:
+        print("Metodo seleccionado: Tarjeta de credito")
+    elif opcion_pago == 2:
+        print("Metodo seleccionado: Efectivo")
+    else:
+        print("Metodo no reconocido")
+
+    print()
+    print("Muchas gracias por visitar la Tienda del Caos.")
+    print("Con nosotros es todo un gusto servirte.")
+else:
+    print("No se agregaron productos al carrito.")</code></pre>
+      </details>
+    </section>
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- [FRAME 13 - VENTANA MODAL DE FELICITACIONES / OVERLAY]                    -->
+  <!-- Ubicación: Modal centrado con fondo desenfocado (backdrop blur).          -->
+  <!-- Contiene: Mensaje de cierre de Clase 1 y botón de salto a Clase 2.         -->
+  <!-- ========================================================================= -->
+  <div id="completion-modal" class="completion-modal" role="dialog" aria-modal="true" aria-labelledby="completion-title"
+    hidden>
+    <div class="completion-card">
+      <p class="eyebrow">Clase completada</p>
+      <h2 id="completion-title">Listo, felicitaciones</h2>
+      <p>
+        Terminaste el recorrido de la Clase 1. Ahora puedes pasar al contenido desarrollado de la Clase 2.
+      </p>
+      <div class="next-class-preview">
+        <span>Clase 2</span>
+        <strong>Funciones y figuras</strong>
+        <small>Version 1.2 - 2 de julio de 2026</small>
+      </div>
+      <div class="modal-actions">
+        <button id="continue-class-two" class="file-link" type="button">Continuar con Clase 2</button>
+        <button id="close-completion" class="secondary-action" type="button">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
