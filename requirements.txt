@@ -1,0 +1,9 @@
+# =============================================================================
+# DEPENDENCIAS - PLATAFORMA EDUCATIVA PYTHON & WEB SERVICE
+# =============================================================================
+# El proyecto cuenta con un servidor nativo multihilo en Python 3 que no requiere
+# paquetes externos obligatorios para ejecutarse con `python main.py`.
+#
+# Para despliegues en servidores de producción basados en Linux (Render, Railway, VPS, etc.)
+# se incluye Gunicorn como servidor WSGI de alto rendimiento:
+gunicorn>=21.2.0

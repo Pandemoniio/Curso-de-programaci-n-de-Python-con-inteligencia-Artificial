@@ -46,12 +46,42 @@ def consultar_clases():
     conexion.close()
     return filas
 
+def consultar_clases_dict():
+    '''Consulta y retorna todas las clases en formato diccionario serializable para la API.'''
+    conexion = sqlite3.connect(DB_PATH)
+    conexion.row_factory = sqlite3.Row
+    cursor = conexion.cursor()
+    cursor.execute("SELECT id, numero_clase, titulo, docente, fecha, modalidad, resumen_pedagogico FROM clases ORDER BY numero_clase ASC")
+    filas = [dict(fila) for fila in cursor.fetchall()]
+    conexion.close()
+    return filas
+
 def consultar_productos():
     '''Consulta el inventario de la Tienda del Caos.'''
     conexion = sqlite3.connect(DB_PATH)
     cursor = conexion.cursor()
     cursor.execute("SELECT codigo_producto, nombre, categoria, precio, stock FROM productos_inventario ORDER BY codigo_producto ASC")
     filas = cursor.fetchall()
+    conexion.close()
+    return filas
+
+def consultar_productos_dict():
+    '''Consulta y retorna el catálogo de productos en formato diccionario para la API.'''
+    conexion = sqlite3.connect(DB_PATH)
+    conexion.row_factory = sqlite3.Row
+    cursor = conexion.cursor()
+    cursor.execute("SELECT id, codigo_producto, categoria, nombre, precio, stock, alerta_stock_minimo FROM productos_inventario ORDER BY codigo_producto ASC")
+    filas = [dict(fila) for fila in cursor.fetchall()]
+    conexion.close()
+    return filas
+
+def consultar_estudiantes_dict():
+    '''Consulta los estudiantes registrados en la base de datos.'''
+    conexion = sqlite3.connect(DB_PATH)
+    conexion.row_factory = sqlite3.Row
+    cursor = conexion.cursor()
+    cursor.execute("SELECT id, nombre_completo, correo, carrera, fecha_registro FROM estudiantes ORDER BY id ASC")
+    filas = [dict(fila) for fila in cursor.fetchall()]
     conexion.close()
     return filas
 

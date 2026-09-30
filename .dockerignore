@@ -1,0 +1,15 @@
+.git
+.github
+.gitignore
+.dockerignore
+.vscode
+.gemini
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.log
+venv
+.env
+scratch
+.DS_Store
